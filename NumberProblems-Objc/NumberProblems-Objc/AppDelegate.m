@@ -15,6 +15,7 @@
 @implementation AppDelegate
 
 static int multiple = 8;
+static int divisor = 8;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -25,7 +26,9 @@ static int multiple = 8;
 - (void)iterateCount:(int)cnt;
 {
     int multResult = [self multiplied:cnt];
+    int divResult = [self divided:multResult];
     NSLog(@"Multiplied %d by %d to be %d", cnt, multiple, multResult);
+    NSLog(@"Divided %d by %d to be %d", multResult, divisor, divResult);
     NSLog(@"Iterate %d", cnt);
     int nextCnt = --cnt;
     if (nextCnt >= 0)
@@ -38,6 +41,11 @@ static int multiple = 8;
 - (int)multiplied:(int)arg;
 {
     return multiple*arg;
+}
+
+- (int)divided:(int)arg;
+{
+    return arg/divisor;
 }
 
 @end

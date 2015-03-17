@@ -17,6 +17,7 @@
 
 - (void)iterateCount:(int)cnt;
 - (int)multiplied:(int)arg;
+- (int)divided:(int)arg;
 
 @end
 
