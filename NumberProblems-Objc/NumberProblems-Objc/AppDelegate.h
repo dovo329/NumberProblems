@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    
+}
+
 
 @property (strong, nonatomic) UIWindow *window;
 
 - (void)iterateCount:(int)cnt;
+- (int)multiplied:(int)arg;
 
 @end
 
