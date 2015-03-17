@@ -17,10 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [self iterateCount:4];
     // Insert code here...
-    
-    
     return YES;
 }
+- (void)iterateCount:(int)cnt;
+{
+    NSLog(@"Iterate %d", cnt);
+    int nextCnt = --cnt;
+    if (nextCnt >= 0)
+    {
+        [self iterateCount:nextCnt];
+    }
+}
+
 
 @end
