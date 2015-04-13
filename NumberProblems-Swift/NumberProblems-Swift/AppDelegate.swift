@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let kMultiple : Int = 8
+    let kDivisor : Int = 6
     
     var window: UIWindow?
 
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             countMinusOne--
             var multipliedResult = multiplied(count)
             println("Multiplied \(count) by \(kMultiple) to be \(multipliedResult)")
+            var dividedResult : Double = divided(multipliedResult)
+            println("Divided \(multipliedResult) by \(kDivisor) to be \(dividedResult)")
             iterateCount(countMinusOne)
         }
     }
@@ -29,7 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func multiplied(arg: Int) -> (Int) {
         return (arg*kMultiple)
     }
-
+    
+    func divided(arg: Int) -> (Double) {
+        return Double(arg)/Double(kDivisor)
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
