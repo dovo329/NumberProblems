@@ -11,6 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let kMultiple : Int = 8
+    
     var window: UIWindow?
 
     func iterateCount(count: Int) -> (Void) {
@@ -18,8 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             println("iterateCount = \(count)")
             var countMinusOne = count
             countMinusOne--
+            var multipliedResult = multiplied(count)
+            println("Multiplied \(count) by \(kMultiple) to be \(multipliedResult)")
             iterateCount(countMinusOne)
         }
+    }
+    
+    func multiplied(arg: Int) -> (Int) {
+        return (arg*kMultiple)
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
